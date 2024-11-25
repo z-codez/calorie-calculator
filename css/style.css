@@ -1,0 +1,44 @@
+body {
+  background-color: #1B1B32;
+  color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#budget {
+  width: 150px;
+}
+fieldset {
+  margin-top: 10px;
+}
+
+label[for="entry"] {
+  display: block;
+  margin-top: 10px;
+}
+
+div[id="buttons"] {
+  margin-top: 10px;
+}
+
+button {
+  background-color: #FECC4C;
+  border: 1px solid #FEAC32;
+}
+
+#display {
+  border: 1px solid #ffffff;
+  text-align: center;
+  width: 70%;
+  margin: 30px auto;
+}
+hr {
+  width: 96%;
+}

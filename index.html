@@ -4,11 +4,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>Calorie Counter</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <main>
+    <h1>Calorie Counter</h1>
+    <form id="form" action="#" method="post">
+      <label for="budget">
+        Budget
+        <input id="budget" placeholder="Daily calorie budget" type="number" min="100" max="3000" required/>
+      </label>
+      <fieldset>
+        <legend>Breakfast</legend>
+      </fieldset>
+      <fieldset>
+        <legend>Lunch</legend>
+      </fieldset>
+      <fieldset>
+        <legend>Dinner</legend>
+      </fieldset>
+      <fieldset>
+        <legend>Snacks</legend>
+      </fieldset>
+      <fieldset>
+        <legend>Exercise</legend>
+      </fieldset>
+      <label for="entry">
+        Add food or exercise:
+        <select id="entry" name="entry">
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Snacks</option>
+          <option>Exercise</option>
+        </select>
+        <button>Add Entry</button>
+      </label>
+      <div id="buttons">
+        <button>Calculate Remaining Calories</button>
+        <button>Clear</button>
+      </div>
+    </form>
+    <div id="display">
+      <h3><span id="calories-left">0</span> Calorie Deficit</h3>
+      <hr>
+      <p><span id="budgeted">0</span> Calories Budgeted</p>
+      <p><span id="consumed">0</span> Calories Consumed</p>
+      <p><span id="burned">0</span> Calories Burned</p>
+    </div>
+  </main>
   <script src="js/app.js"></script>
 </body>
 
