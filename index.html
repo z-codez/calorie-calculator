@@ -11,43 +11,51 @@
 <body>
   <main>
     <h1>Calorie Counter</h1>
-    <form id="form" action="#" method="post">
+    <form id="form"> <!--action="#" method="post"-->
       <label for="budget">
         Budget
         <input id="budget" placeholder="Daily calorie budget" type="number" min="100" max="3000" required/>
       </label>
-      <fieldset>
+      <fieldset id="breakfast">
         <legend>Breakfast</legend>
+        <div class="input-container"></div>
       </fieldset>
-      <fieldset>
+      <fieldset id="lunch">
         <legend>Lunch</legend>
+        <div class="input-container"></div>
       </fieldset>
-      <fieldset>
+      <fieldset id="dinner">
         <legend>Dinner</legend>
+        <div class="input-container"></div>
       </fieldset>
-      <fieldset>
+      <fieldset id="snacks">
         <legend>Snacks</legend>
+        <div class="input-container"></div>
       </fieldset>
-      <fieldset>
+      <fieldset id="exercise">
         <legend>Exercise</legend>
+        <div class="input-container"></div>
       </fieldset>
-      <label for="entry">
+      <span id="controls">
+        <label for="entry">
         Add food or exercise:
-        <select id="entry" name="entry">
-          <option>Breakfast</option>
-          <option>Lunch</option>
-          <option>Dinner</option>
-          <option>Snacks</option>
-          <option>Exercise</option>
+        <select id="entry" name="options">
+          <option value="breakfast">Breakfast</option>
+          <option value="lunch">Lunch</option>
+          <option value="dinner">Dinner</option>
+          <option value="snacks">Snacks</option>
+          <option value="exercise">Exercise</option>
         </select>
-        <button>Add Entry</button>
-      </label>
+        </label>
+        <!--        type is set to "button" to prevent automatic form submission-->
+        <button type="button">Add Entry</button>
+      </span>
       <div id="buttons">
-        <button>Calculate Remaining Calories</button>
-        <button>Clear</button>
+        <button type="submit">Calculate Remaining Calories</button>
+        <button type="button">Clear</button>
       </div>
     </form>
-    <div id="display">
+    <div id="display" class="display hide">
       <h3><span id="calories-left">0</span> Calorie Deficit</h3>
       <hr>
       <p><span id="budgeted">0</span> Calories Budgeted</p>
