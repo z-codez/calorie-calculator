@@ -1,6 +1,8 @@
 body {
   background-color: #1B1B32;
   color: #ffffff;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 18px;
 }
 
 h1 {
@@ -15,18 +17,26 @@ form {
 #budget {
   width: 150px;
 }
-fieldset {
+/*fieldset,
+#controls,
+#buttons{
+  margin-top: 10px;
+}*/
+
+/*Inline block elements can have margins and paddings on all sides*/
+fieldset,
+label,
+button,
+input,
+select {
   margin-top: 10px;
 }
 
-label[for="entry"] {
-  display: block;
-  margin-top: 10px;
+label,
+legend {
+  font-weight: bold;
 }
 
-div[id="buttons"] {
-  margin-top: 10px;
-}
 
 button {
   background-color: #FECC4C;
@@ -41,4 +51,9 @@ button {
 }
 hr {
   width: 96%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
 }

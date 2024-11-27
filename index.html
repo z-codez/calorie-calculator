@@ -12,10 +12,8 @@
   <main>
     <h1>Calorie Counter</h1>
     <form id="form"> <!--action="#" method="post"-->
-      <label for="budget">
-        Budget
-        <input id="budget" placeholder="Daily calorie budget" type="number" min="100" max="3000" required/>
-      </label>
+      <label for="budget">Budget</label>
+      <input id="budget" placeholder="Daily calorie budget" type="number" min="100" max="3000" required/>
       <fieldset id="breakfast">
         <legend>Breakfast</legend>
         <div class="input-container"></div>
@@ -37,8 +35,7 @@
         <div class="input-container"></div>
       </fieldset>
       <span id="controls">
-        <label for="entry">
-        Add food or exercise:
+        <label for="entry">Add food or exercise:</label>
         <select id="entry" name="options">
           <option value="breakfast">Breakfast</option>
           <option value="lunch">Lunch</option>
@@ -46,8 +43,6 @@
           <option value="snacks">Snacks</option>
           <option value="exercise">Exercise</option>
         </select>
-        </label>
-        <!--        type is set to "button" to prevent automatic form submission-->
         <button type="button">Add Entry</button>
       </span>
       <div id="buttons">

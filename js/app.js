@@ -10,7 +10,7 @@ const outputDisplay = document.querySelector("#display");
 function addEntry() {
   console.log(entryDropdown.value);
   const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
-  const noOfEntries = targetInputContainer.querySelectorAll(`input[type="number"]`).length;
+  const noOfEntries = targetInputContainer.querySelectorAll(`input[type="number"]`).length + 1;
 
   const currentEntry = entryDropdown.value + "-" + noOfEntries;
 
@@ -23,3 +23,5 @@ function addEntry() {
 
   targetInputContainer.innerHTML += HTMLString;
 }
+
+addEntryButton.addEventListener('click', addEntry);
