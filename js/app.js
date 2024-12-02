@@ -1,6 +1,6 @@
 const form = document.querySelector("#form");
-const budgetInput = document.querySelector("#budget");
 const entryDropdown = document.querySelector("#entry");
+const budgetInput = document.querySelector("#budget");
 const addEntryButton = document.querySelector("#controls button");
 // const calculateButton = document.querySelector("#buttons button:first-of-type");
 const clearButton = document.querySelector("#buttons button:last-of-type");
@@ -8,9 +8,10 @@ const outputDisplay = document.querySelector("#display");
 
 
 function addEntry() {
-  console.log(entryDropdown.value);
-  const targetInputContainer = document.querySelector(`#${entryDropdown.value} .input-container`);
-  const noOfEntries = targetInputContainer.querySelectorAll(`input[type="number"]`).length + 1;
+  const targetInputContainer = document.querySelector(`#${entryDropdown.value}` + " .input-container");
+
+  // Get the number of child nodes in the parent container. Returns a static NodeList
+  const noOfEntries = targetInputContainer.querySelectorAll('input[type="number"]').length + 1;
 
   const currentEntry = entryDropdown.value + "-" + noOfEntries;
 
@@ -21,7 +22,26 @@ function addEntry() {
   <input id="${currentEntry}-calories" type="number" min="0" placeholder="Number of calories"/>
   `;
 
-  targetInputContainer.innerHTML += HTMLString;
+  targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
+
+
+function calcRemCalories() {
+
+  console.log(budgetInput.value);
+  console.log(typeof budgetInput.value);
+}
+
+/************* EVENT LISTENERS ***************************/
 addEntryButton.addEventListener('click', addEntry);
+form.addEventListener('submit', calcRemCalories);
+
+
+function getCaloriesFromInputs(list) {
+  let calories = 0;
+
+  for (const listItem of list) {
+
+  }
+}
