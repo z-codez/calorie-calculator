@@ -2,7 +2,6 @@ const form = document.querySelector("#form");
 const entryDropdown = document.querySelector("#entry");
 const budgetInput = document.querySelector("#budget");
 const addEntryButton = document.querySelector("#controls button");
-// const calculateButton = document.querySelector("#buttons button:first-of-type");
 const clearButton = document.querySelector("#buttons button:last-of-type");
 const outputDisplay = document.querySelector("#display");
 
@@ -15,13 +14,6 @@ const burnedSpan = outputDisplay.querySelector("#burned");
 let isError = false;
 
 function runTest() {
-  let n = 1;
-
-  let numberString = '121';
-  numberString += n;
-
-  console.log(typeof n);
-  console.log(/\d+e\d+/i.test("1E10 1e10"));
 }
 // runTest();
 
@@ -50,7 +42,6 @@ function calcRemCalories(e) {
   isError = false;
 
   const budgetCalories = budgetInput.value;
-  console.log(budgetCalories);
 
   const breakfastCalories = getCaloriesFromInputs(document.querySelectorAll('#breakfast input[type="number"]'));
   const lunchCalories = getCaloriesFromInputs(document.querySelectorAll('#lunch input[type="number"]'));
@@ -67,6 +58,8 @@ function calcRemCalories(e) {
   budgetedSpan.innerText = budgetCalories;
   consumedSpan.innerText = consumedCalories;
   burnedSpan.innerText = exerciseCalories;
+
+  // Make Output visible
   outputDisplay.style.display = "block";
 }
 
