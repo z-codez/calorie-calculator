@@ -57,3 +57,7 @@ hr {
   display: flex;
   flex-direction: column;
 }
+
+#display {
+  display: none;
+}
