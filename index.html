@@ -46,11 +46,12 @@
         <button type="button">Add Entry</button>
       </span>
       <div id="buttons">
-        <button type="submit">Calculate Remaining Calories</button>
-        <button type="button">Clear</button>
+<!--        default type for a button is "submit"-->
+        <button>Calculate Remaining Calories</button>
+        <button type="reset">Clear</button>
       </div>
     </form>
-    <div id="display" class="display hide">
+    <div id="display" class="display hidden">
       <h3><span id="calories-left"></span> Calorie <span id="surplusordeficit"></span></h3>
       <hr>
       <p><span id="budgeted">0</span> Calories Budgeted</p>

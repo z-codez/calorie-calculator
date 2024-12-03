@@ -31,11 +31,23 @@ function addEntry() {
   <label for="${currentEntry}-calories">Entry ${noOfEntries} Calories</label>
   <input id="${currentEntry}-calories" type="number" min="0" placeholder="Number of calories"/>
   `;
-
+  // Allows placing HTML at a certain position relative to the respective element
   targetInputContainer.insertAdjacentHTML("beforeend", HTMLString);
 }
 
 
+function clearForm() {
+  // Using javascript to add a class to html element to make it hidden
+  // outputDisplay.classList.add("hidden");
+  const inputContainers = document.querySelectorAll(".input-container");
+  inputContainers.forEach(input => {
+    input.innerHTML = "";
+  })
+
+  outputDisplay.style.display = "none";
+  // OR THIS
+  //outputDisplay.classList.add("hidden");
+}
 
 function calcRemCalories(e) {
   e.preventDefault();
@@ -66,7 +78,7 @@ function calcRemCalories(e) {
 /************* EVENT LISTENERS ***************************/
 addEntryButton.addEventListener('click', addEntry);
 form.addEventListener('submit', calcRemCalories);
-
+form.addEventListener('reset', clearForm);
 
 function getCaloriesFromInputs(list) {
   let calories = 0;
